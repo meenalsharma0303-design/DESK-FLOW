@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESKFLOW — Housekeeping</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="dashboard-body">
+
+
+<!-- SIDEBAR -->
+
+<aside class="dashboard-sidebar">
+
+    <a href="dashboard.html" class="dashboard-logo">
+        DESKFLOW<span>.</span>
+    </a>
+
+    <p class="sidebar-label">
+        MANAGEMENT
+    </p>
+
+    <nav class="dashboard-nav">
+
+        <a href="dashboard.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="bookings.html">
+            <span>▣</span>
+            Bookings
+        </a>
+
+        <a href="rooms-management.html">
+            <span>▦</span>
+            Rooms
+        </a>
+
+        <a href="guests.html">
+            <span>♙</span>
+            Guests
+        </a>
+
+        <a href="housekeeping.html" class="active">
+            <span>♧</span>
+            Housekeeping
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="index.html">
+            ← View website
+        </a>
+
+        <a href="staff-login.html">
+            Log out
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+
+    <!-- HEADER -->
+
+    <header class="management-header">
+
+        <div>
+
+            <p class="eyebrow">
+                HOUSEKEEPING
+            </p>
+
+            <h1>
+                Keep every room <em>ready.</em>
+            </h1>
+
+            <p class="management-subtitle">
+                Track cleaning tasks and room readiness.
+            </p>
+
+        </div>
+
+        <div class="housekeeping-total">
+
+            <strong>3</strong>
+
+            <span>
+                Rooms need attention
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SUMMARY -->
+
+    <section class="housekeeping-summary">
+
+
+        <div class="housekeeping-summary-card">
+
+            <span class="summary-dot cleaning-dot"></span>
+
+            <div>
+
+                <p>
+                    TO CLEAN
+                </p>
+
+                <strong>
+                    3
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="housekeeping-summary-card">
+
+            <span class="summary-dot progress-dot"></span>
+
+            <div>
+
+                <p>
+                    IN PROGRESS
+                </p>
+
+                <strong>
+                    1
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="housekeeping-summary-card">
+
+            <span class="summary-dot available-dot"></span>
+
+            <div>
+
+                <p>
+                    READY
+                </p>
+
+                <strong>
+                    7
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="housekeeping-summary-card">
+
+            <span class="summary-dot maintenance-dot"></span>
+
+            <div>
+
+                <p>
+                    MAINTENANCE
+                </p>
+
+                <strong>
+                    2
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- TASKS -->
+
+    <section class="housekeeping-card">
+
+        <div class="housekeeping-card-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    TODAY'S TASKS
+                </p>
+
+                <h2>
+                    Room cleaning
+                </h2>
+
+            </div>
+
+            <span>
+                29 August 2026
+            </span>
+
+        </div>
+
+
+
+        <div class="housekeeping-task">
+
+
+            <div class="task-room">
+
+                <div class="task-room-number">
+                    201
+                </div>
+
+                <div>
+
+                    <strong>
+                        Sunset Suite
+                    </strong>
+
+                    <span>
+                        Check-out completed · 11:15 AM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-staff">
+
+                <span>
+                    Assigned to
+                </span>
+
+                <strong>
+                    Priya
+                </strong>
+
+            </div>
+
+
+            <span class="housekeeping-status cleaning">
+                To clean
+            </span>
+
+
+            <button>
+                Start cleaning
+            </button>
+
+        </div>
+
+
+
+        <div class="housekeeping-task">
+
+
+            <div class="task-room">
+
+                <div class="task-room-number">
+                    102
+                </div>
+
+                <div>
+
+                    <strong>
+                        Garden Room
+                    </strong>
+
+                    <span>
+                        Check-out completed · 12:05 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-staff">
+
+                <span>
+                    Assigned to
+                </span>
+
+                <strong>
+                    Neha
+                </strong>
+
+            </div>
+
+
+            <span class="housekeeping-status progress">
+                In progress
+            </span>
+
+
+            <button>
+                View task
+            </button>
+
+        </div>
+
+
+
+        <div class="housekeeping-task">
+
+
+            <div class="task-room">
+
+                <div class="task-room-number">
+                    105
+                </div>
+
+                <div>
+
+                    <strong>
+                        Cloud Room
+                    </strong>
+
+                    <span>
+                        Check-out completed · 1:20 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-staff">
+
+                <span>
+                    Assigned to
+                </span>
+
+                <strong>
+                    Rohan
+                </strong>
+
+            </div>
+
+
+            <span class="housekeeping-status ready">
+                Ready
+            </span>
+
+
+            <button>
+                View room
+            </button>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <!-- NOTE -->
+
+    <section class="housekeeping-note">
+
+        <span>
+            ✦
+        </span>
+
+        <div>
+
+            <strong>
+                Keep the front desk in sync
+            </strong>
+
+            <p>
+                Room status changes will eventually update automatically
+                across bookings and the dashboard.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+</body>
+
+</html>

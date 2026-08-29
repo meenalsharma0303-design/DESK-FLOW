@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESKFLOW — Book Your Stay</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="rooms-navbar">
+
+    <a href="index.html" class="rooms-logo">
+        DESKFLOW<span>.</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="rooms.html">Rooms</a>
+
+        <a href="index.html#experience">Experience</a>
+
+        <a href="index.html#about">About</a>
+
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= BOOKING HERO ================= -->
+
+<section class="booking-hero">
+
+    <p class="eyebrow">
+        ✦ DESKFLOW HOTEL
+    </p>
+
+    <h1>
+        Book your<br>
+        <em>little escape.</em>
+    </h1>
+
+    <p>
+        Pick your dates, choose your room,
+        and we'll take care of the rest.
+    </p>
+
+</section>
+
+
+<!-- ================= BOOKING SECTION ================= -->
+
+<section class="booking-section">
+
+    <!-- FORM -->
+
+    <div class="booking-form-container">
+
+        <div class="form-heading">
+
+            <p class="eyebrow">
+                YOUR STAY
+            </p>
+
+            <h2>
+                Let's make it <em>official.</em>
+            </h2>
+
+        </div>
+
+
+        <form id="bookingForm">
+
+
+            <!-- DATES -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="checkin">
+                        CHECK-IN
+                    </label>
+
+                    <input
+                        type="date"
+                        id="checkin"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="checkout">
+                        CHECK-OUT
+                    </label>
+
+                    <input
+                        type="date"
+                        id="checkout"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ROOM + GUESTS -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="room">
+                        CHOOSE YOUR ROOM
+                    </label>
+
+                    <select id="room" required>
+
+                        <option value="">
+                            Select a room
+                        </option>
+
+                        <option value="Cloud Room">
+                            Cloud Room — ₹4,999/night
+                        </option>
+
+                        <option value="Sunset Suite">
+                            Sunset Suite — ₹7,999/night
+                        </option>
+
+                        <option value="Garden Room">
+                            Garden Room — ₹5,499/night
+                        </option>
+
+                        <option value="DESKFLOW Suite">
+                            DESKFLOW Suite — ₹9,999/night
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="guests">
+                        GUESTS
+                    </label>
+
+                    <select id="guests" required>
+
+                        <option value="">
+                            Guests
+                        </option>
+
+                        <option value="1">
+                            1 Guest
+                        </option>
+
+                        <option value="2">
+                            2 Guests
+                        </option>
+
+                        <option value="3">
+                            3 Guests
+                        </option>
+
+                        <option value="4">
+                            4 Guests
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    FULL NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL + PHONE -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        EMAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        PHONE
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+91"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- REQUEST -->
+
+            <div class="form-group">
+
+                <label for="requests">
+                    SPECIAL REQUESTS
+                </label>
+
+                <textarea
+                    id="requests"
+                    rows="4"
+                    placeholder="Anything you'd like us to know? ♡"
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+            <a href="confirmation.html" class="booking-submit">
+               Confirm my stay ♡
+               <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            
+            <p class="secure-text">
+                <i class="fa-solid fa-lock"></i>
+                Your information is kept private and secure.
+            </p>
+
+        </form>
+
+    </div>
+
+
+    <!-- ================= BOOKING SUMMARY ================= -->
+
+    <aside class="booking-summary">
+
+        <div class="summary-image"></div>
+
+        <div class="summary-content">
+
+            <p class="eyebrow">
+                YOUR DESKFLOW MOMENT
+            </p>
+
+            <h2>
+                Stay a little.<br>
+                <em>Live a lot.</em>
+            </h2>
+
+            <p>
+                From slow mornings to late-night conversations,
+                make your stay something worth remembering.
+            </p>
+
+
+            <div class="summary-line"></div>
+
+
+            <div class="summary-feature">
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>
+                    Best available room
+                </span>
+
+            </div>
+
+
+            <div class="summary-feature">
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>
+                    Complimentary Wi-Fi
+                </span>
+
+            </div>
+
+
+            <div class="summary-feature">
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>
+                    24/7 guest assistance
+                </span>
+
+            </div>
+
+
+            <div class="summary-feature">
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>
+                    Flexible stay experience
+                </span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</section>
+
+
+<!-- ================= SUCCESS MESSAGE ================= -->
+
+<div
+    class="booking-success"
+    id="successMessage"
+>
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ♡
+        </div>
+
+        <h2>
+            You're all set!
+        </h2>
+
+        <p>
+            Your stay request has been received.
+            We can't wait to welcome you to DESKFLOW
+        </p>
+
+        <button onclick="closeSuccess()">
+            Back to DESKFLOW
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div>
+
+            <a href="index.html" class="logo">
+                DESKFLOW<span>.</span>
+            </a>
+
+            <p>
+                A little place to feel at home.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4>EXPLORE</h4>
+
+                <a href="index.html">Home</a>
+
+                <a href="rooms.html">Rooms</a>
+
+                <a href="index.html#experience">
+                    Experience
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>CONTACT</h4>
+
+                <p>hello@deskflowhotel.com</p>
+
+                <p>+91 98765 43210</p>
+
+                <p>New Delhi, India</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 DESKFLOW HOTEL
+        </p>
+
+        <p>
+            Made with ♡ for good stays.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESKFLOW — Guests</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- SIDEBAR -->
+
+<aside class="dashboard-sidebar">
+
+    <a href="dashboard.html" class="dashboard-logo">
+        DESKFLOW<span>.</span>
+    </a>
+
+    <p class="sidebar-label">
+        MANAGEMENT
+    </p>
+
+    <nav class="dashboard-nav">
+
+        <a href="dashboard.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="bookings.html">
+            <span>▣</span>
+            Bookings
+        </a>
+
+        <a href="rooms-management.html">
+            <span>▦</span>
+            Rooms
+        </a>
+
+        <a href="guests.html" class="active">
+            <span>♙</span>
+            Guests
+        </a>
+
+        <a href="housekeeping.html">
+            <span>♧</span>
+            Housekeeping
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="index.html">
+            ← View website
+        </a>
+
+        <a href="staff-login.html">
+            Log out
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+    <header class="management-header">
+
+        <div>
+
+            <p class="eyebrow">
+                GUEST MANAGEMENT
+            </p>
+
+            <h1>
+                Know your <em>guests.</em>
+            </h1>
+
+            <p class="management-subtitle">
+                Guest details and current stays, all in one place.
+            </p>
+
+        </div>
+
+        <div class="guest-total">
+            <strong>68</strong>
+            <span>Active guests</span>
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+
+    <section class="guest-search-area">
+
+        <div class="guest-search">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                placeholder="Search guest by name, email or booking ID..."
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- GUEST TABLE -->
+
+    <section class="guest-table-card">
+
+        <div class="guest-table-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    GUEST DIRECTORY
+                </p>
+
+                <h2>
+                    Current guests
+                </h2>
+
+            </div>
+
+            <span>
+                Updated today
+            </span>
+
+        </div>
+
+
+        <div class="guest-table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>GUEST</th>
+
+                        <th>CONTACT</th>
+
+                        <th>ROOM</th>
+
+                        <th>STAY</th>
+
+                        <th>BOOKING</th>
+
+                        <th>STATUS</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="guest-table-person">
+
+                                <div class="large-guest-avatar">
+                                    A
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Aarav Mehta
+                                    </strong>
+
+                                    <span>
+                                        Guest since 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            aarav@email.com<br>
+                            <small>+91 98XXX XXXXX</small>
+                        </td>
+
+                        <td>
+                            Cloud Room
+                        </td>
+
+                        <td>
+                            29 Aug – 31 Aug
+                        </td>
+
+                        <td>
+                            DF-001
+                        </td>
+
+                        <td>
+                            <span class="guest-status staying">
+                                Staying
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="guest-table-person">
+
+                                <div class="large-guest-avatar">
+                                    R
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Riya Sharma
+                                    </strong>
+
+                                    <span>
+                                        Guest since 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            riya@email.com<br>
+                            <small>+91 97XXX XXXXX</small>
+                        </td>
+
+                        <td>
+                            Garden Room
+                        </td>
+
+                        <td>
+                            29 Aug – 01 Sep
+                        </td>
+
+                        <td>
+                            DF-002
+                        </td>
+
+                        <td>
+                            <span class="guest-status arriving">
+                                Arriving
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="guest-table-person">
+
+                                <div class="large-guest-avatar">
+                                    K
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Kabir Singh
+                                    </strong>
+
+                                    <span>
+                                        Guest since 2025
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            kabir@email.com<br>
+                            <small>+91 99XXX XXXXX</small>
+                        </td>
+
+                        <td>
+                            Sunset Suite
+                        </td>
+
+                        <td>
+                            29 Aug – 30 Aug
+                        </td>
+
+                        <td>
+                            DF-003
+                        </td>
+
+                        <td>
+                            <span class="guest-status staying">
+                                Staying
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="guest-table-person">
+
+                                <div class="large-guest-avatar">
+                                    N
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Naina Kapoor
+                                    </strong>
+
+                                    <span>
+                                        Guest since 2026
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            naina@email.com<br>
+                            <small>+91 96XXX XXXXX</small>
+                        </td>
+
+                        <td>
+                            DESKFLOW Suite
+                        </td>
+
+                        <td>
+                            28 Aug – 30 Aug
+                        </td>
+
+                        <td>
+                            DF-004
+                        </td>
+
+                        <td>
+                            <span class="guest-status staying">
+                                Staying
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>

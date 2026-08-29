@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESKFLOW — Room Management</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+
+<body class="dashboard-body">
+
+
+<!-- SIDEBAR -->
+
+<aside class="dashboard-sidebar">
+
+    <a href="dashboard.html"
+       class="dashboard-logo">
+
+        DESKFLOW<span>.</span>
+
+    </a>
+
+
+    <p class="sidebar-label">
+        MANAGEMENT
+    </p>
+
+
+    <nav class="dashboard-nav">
+
+        <a href="dashboard.html">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="bookings.html">
+            <span>▣</span>
+            Bookings
+        </a>
+
+        <a href="rooms-management.html"
+           class="active">
+
+            <span>▦</span>
+            Rooms
+
+        </a>
+
+        <a href="guests.html">
+            <span>♙</span>
+            Guests
+        </a>
+
+        <a href="housekeeping.html">
+            <span>♧</span>
+            Housekeeping
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="index.html">
+            ← View website
+        </a>
+
+        <a href="staff-login.html">
+            Log out
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+
+    <!-- HEADER -->
+
+    <header class="management-header">
+
+        <div>
+
+            <p class="eyebrow">
+                ROOM MANAGEMENT
+            </p>
+
+            <h1>
+                Know every <em>room.</em>
+            </h1>
+
+            <p class="management-subtitle">
+                Monitor availability and room conditions at a glance.
+            </p>
+
+        </div>
+
+
+        <div class="room-count">
+
+            <strong>24</strong>
+
+            <span>Total rooms</span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- STATUS SUMMARY -->
+
+    <section class="room-summary">
+
+
+        <div class="room-summary-card">
+
+            <span class="summary-dot available-dot"></span>
+
+            <div>
+
+                <p>
+                    AVAILABLE
+                </p>
+
+                <strong>
+                    7
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="room-summary-card">
+
+            <span class="summary-dot occupied-dot"></span>
+
+            <div>
+
+                <p>
+                    OCCUPIED
+                </p>
+
+                <strong>
+                    12
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="room-summary-card">
+
+            <span class="summary-dot cleaning-dot"></span>
+
+            <div>
+
+                <p>
+                    CLEANING
+                </p>
+
+                <strong>
+                    3
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="room-summary-card">
+
+            <span class="summary-dot maintenance-dot"></span>
+
+            <div>
+
+                <p>
+                    MAINTENANCE
+                </p>
+
+                <strong>
+                    2
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ROOM GRID -->
+
+    <section class="rooms-management-grid">
+
+
+        <!-- CLOUD -->
+
+        <div class="managed-room-card">
+
+            <div class="managed-room-top">
+
+                <span class="room-number">
+                    ROOM 101
+                </span>
+
+                <span class="room-status-badge available">
+                    Available
+                </span>
+
+            </div>
+
+
+            <h2>
+                Cloud Room
+            </h2>
+
+            <p class="room-description">
+                Calm, airy space with a soft city view.
+            </p>
+
+
+            <div class="managed-room-info">
+
+                <span>
+                    2 guests
+                </span>
+
+                <span>
+                    ₹4,999 / night
+                </span>
+
+            </div>
+
+
+            <div class="managed-room-bottom">
+
+                <span class="room-condition">
+                    ● Ready
+                </span>
+
+                <button>
+                    Update status
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GARDEN -->
+
+        <div class="managed-room-card">
+
+            <div class="managed-room-top">
+
+                <span class="room-number">
+                    ROOM 102
+                </span>
+
+                <span class="room-status-badge occupied">
+                    Occupied
+                </span>
+
+            </div>
+
+
+            <h2>
+                Garden Room
+            </h2>
+
+            <p class="room-description">
+                A peaceful stay surrounded by greenery.
+            </p>
+
+
+            <div class="managed-room-info">
+
+                <span>
+                    2 guests
+                </span>
+
+                <span>
+                    ₹5,499 / night
+                </span>
+
+            </div>
+
+
+            <div class="managed-room-bottom">
+
+                <span class="room-condition">
+                    ● Guest staying
+                </span>
+
+                <button>
+                    Update status
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUNSET -->
+
+        <div class="managed-room-card">
+
+            <div class="managed-room-top">
+
+                <span class="room-number">
+                    ROOM 201
+                </span>
+
+                <span class="room-status-badge cleaning">
+                    Cleaning
+                </span>
+
+            </div>
+
+
+            <h2>
+                Sunset Suite
+            </h2>
+
+            <p class="room-description">
+                Warm interiors with an open sunset view.
+            </p>
+
+
+            <div class="managed-room-info">
+
+                <span>
+                    3 guests
+                </span>
+
+                <span>
+                    ₹7,999 / night
+                </span>
+
+            </div>
+
+
+            <div class="managed-room-bottom">
+
+                <span class="room-condition">
+                    ● Housekeeping
+                </span>
+
+                <button>
+                    Update status
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DESKFLOW -->
+
+        <div class="managed-room-card">
+
+            <div class="managed-room-top">
+
+                <span class="room-number">
+                    ROOM 301
+                </span>
+
+                <span class="room-status-badge maintenance">
+                    Maintenance
+                </span>
+
+            </div>
+
+
+            <h2>
+                DESKFLOW Suite
+            </h2>
+
+            <p class="room-description">
+                Our signature suite with elevated comfort.
+            </p>
+
+
+            <div class="managed-room-info">
+
+                <span>
+                    4 guests
+                </span>
+
+                <span>
+                    ₹9,999 / night
+                </span>
+
+            </div>
+
+
+            <div class="managed-room-bottom">
+
+                <span class="room-condition">
+                    ● Repair required
+                </span>
+
+                <button>
+                    Update status
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>

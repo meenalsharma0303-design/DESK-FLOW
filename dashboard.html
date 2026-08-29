@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DESKFLOW — Staff Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<!-- SIDEBAR -->
+
+<aside class="dashboard-sidebar">
+
+    <a href="dashboard.html" class="dashboard-logo">
+        DESKFLOW<span>.</span>
+    </a>
+
+
+    <p class="sidebar-label">
+        MANAGEMENT
+    </p>
+
+
+    <nav class="dashboard-nav">
+
+        <a href="dashboard.html" class="active">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="bookings.html">
+            <span>▣</span>
+            Bookings
+        </a>
+
+        <a href="rooms-management.html">
+            <span>▦</span>
+            Rooms
+        </a>
+
+        <a href="guests.html">
+            <span>♙</span>
+            Guests
+        </a>
+
+        <a href="housekeeping.html">
+            <span>♧</span>
+            Housekeeping
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="index.html">
+            ← View website
+        </a>
+
+        <a href="staff-login.html">
+            Log out
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+
+    <!-- TOP -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <p class="eyebrow">
+                SATURDAY, 29 AUGUST 2026
+            </p>
+
+            <h1>
+                Good morning, <em>team.</em>
+            </h1>
+
+        </div>
+
+
+        <div class="staff-profile">
+
+            <div class="staff-avatar">
+                S
+            </div>
+
+            <div>
+
+                <strong>
+                    Staff Admin
+                </strong>
+
+                <span>
+                    Front Desk
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- STATS -->
+
+    <section class="dashboard-stats">
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                🛏️
+            </span>
+
+            <div>
+
+                <p>
+                    OCCUPANCY
+                </p>
+
+                <strong>
+                    78%
+                </strong>
+
+                <small>
+                    ↑ 6% from yesterday
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                📅
+            </span>
+
+            <div>
+
+                <p>
+                    TODAY'S BOOKINGS
+                </p>
+
+                <strong>
+                    24
+                </strong>
+
+                <small>
+                    8 new reservations
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <p>
+                    CHECK-INS
+                </p>
+
+                <strong>
+                    12
+                </strong>
+
+                <small>
+                    4 pending
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                ₹
+            </span>
+
+            <div>
+
+                <p>
+                    TODAY'S REVENUE
+                </p>
+
+                <strong>
+                    ₹86.4K
+                </strong>
+
+                <small>
+                    ↑ 12% this week
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CONTENT GRID -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- BOOKINGS -->
+
+        <div class="dashboard-panel bookings-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        TODAY
+                    </p>
+
+                    <h2>
+                        Upcoming arrivals
+                    </h2>
+
+                </div>
+
+                <a href="bookings.html">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <div class="guest-avatar">
+                    A
+                </div>
+
+                <div class="guest-info">
+
+                    <strong>
+                        Aarav Mehta
+                    </strong>
+
+                    <span>
+                        Cloud Room · 2 nights
+                    </span>
+
+                </div>
+
+                <span class="status confirmed">
+                    Confirmed
+                </span>
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <div class="guest-avatar">
+                    R
+                </div>
+
+                <div class="guest-info">
+
+                    <strong>
+                        Riya Sharma
+                    </strong>
+
+                    <span>
+                        Garden Room · 3 nights
+                    </span>
+
+                </div>
+
+                <span class="status pending">
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="booking-row">
+
+                <div class="guest-avatar">
+                    K
+                </div>
+
+                <div class="guest-info">
+
+                    <strong>
+                        Kabir Singh
+                    </strong>
+
+                    <span>
+                        Sunset Suite · 1 night
+                    </span>
+
+                </div>
+
+                <span class="status confirmed">
+                    Confirmed
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ROOM STATUS -->
+
+        <div class="dashboard-panel room-status-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        LIVE STATUS
+                    </p>
+
+                    <h2>
+                        Rooms
+                    </h2>
+
+                </div>
+
+                <a href="rooms-management.html">
+                    Manage →
+                </a>
+
+            </div>
+
+
+            <div class="room-status-item">
+
+                <span>
+                    Cloud Room
+                </span>
+
+                <strong class="room-available">
+                    Available
+                </strong>
+
+            </div>
+
+
+            <div class="room-status-item">
+
+                <span>
+                    Garden Room
+                </span>
+
+                <strong class="room-occupied">
+                    Occupied
+                </strong>
+
+            </div>
+
+
+            <div class="room-status-item">
+
+                <span>
+                    Sunset Suite
+                </span>
+
+                <strong class="room-cleaning">
+                    Cleaning
+                </strong>
+
+            </div>
+
+
+            <div class="room-status-item">
+
+                <span>
+                    DESKFLOW Suite
+                </span>
+
+                <strong class="room-occupied">
+                    Occupied
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="quick-actions">
+
+        <p class="eyebrow">
+            QUICK ACTIONS
+        </p>
+
+
+        <div class="quick-action-grid">
+
+            <a href="bookings.html">
+                <span>＋</span>
+                New booking
+            </a>
+
+            <a href="rooms-management.html">
+                <span>▦</span>
+                Update room status
+            </a>
+
+            <a href="guests.html">
+                <span>♙</span>
+                Find guest
+            </a>
+
+            <a href="#">
+                <span>↗</span>
+                View reports
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>
+
