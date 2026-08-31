@@ -16,3 +16,4 @@ WHERE booking_code IS NULL;
 
 ALTER TABLE bookings
     MODIFY booking_code VARCHAR(30) NOT NULL UNIQUE;
+
