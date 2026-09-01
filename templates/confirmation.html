@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DESKFLOW — Booking Confirmed</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <style>
+
+        /* =====================================================
+           CONFIRMATION PAGE
+           ===================================================== */
+
+        .confirmation-page {
+            min-height: 100vh;
+            background: #f8f5ef;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .confirmation-hero {
+            padding: 110px 8% 70px;
+            text-align: center;
+        }
+
+        .confirmation-hero .eyebrow {
+            margin-bottom: 18px;
+        }
+
+        .confirmation-hero h1 {
+            margin: 0 auto 22px;
+            max-width: 800px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 500;
+            line-height: 1;
+            color: #25231f;
+        }
+
+        .confirmation-hero h1 em {
+            font-weight: 500;
+        }
+
+        .confirmation-hero > p:last-child {
+            max-width: 580px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #706b63;
+        }
+
+
+        /* =====================================================
+           CONFIRMATION CONTENT
+           ===================================================== */
+
+        .confirmation-section {
+            width: min(1100px, 90%);
+            margin: 0 auto 100px;
+
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+
+        /* =====================================================
+           MAIN CONFIRMATION CARD
+           ===================================================== */
+
+        .confirmation-card {
+            background: #ffffff;
+            padding: 48px;
+            border-radius: 4px;
+            box-shadow: 0 18px 50px rgba(40, 35, 28, 0.07);
+        }
+
+
+        .confirmation-icon {
+            width: 62px;
+            height: 62px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 28px;
+
+            border-radius: 50%;
+
+            background: #eee8dd;
+
+            font-family: "Playfair Display", serif;
+            font-size: 1.7rem;
+            color: #35312b;
+        }
+
+
+        .confirmation-card .eyebrow {
+            margin-bottom: 10px;
+        }
+
+
+        .confirmation-card h2 {
+            margin: 0 0 14px;
+
+            font-family: "Playfair Display", serif;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 1.15;
+
+            color: #25231f;
+        }
+
+
+        .confirmation-card > p {
+            margin: 0 0 32px;
+
+            color: #706b63;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           BOOKING CODE
+           ===================================================== */
+
+        .booking-code-box {
+            padding: 20px 22px;
+            margin-bottom: 35px;
+
+            background: #f8f5ef;
+            border: 1px solid #e8e1d6;
+        }
+
+
+        .booking-code-label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+
+            color: #8b8378;
+        }
+
+
+        .booking-code {
+            font-family: "DM Sans", sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+
+            color: #25231f;
+        }
+
+
+        /* =====================================================
+           DETAILS
+           ===================================================== */
+
+        .confirmation-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            border-top: 1px solid #e7e1d8;
+            border-left: 1px solid #e7e1d8;
+        }
+
+
+        .detail-item {
+            padding: 20px;
+
+            border-right: 1px solid #e7e1d8;
+            border-bottom: 1px solid #e7e1d8;
+        }
+
+
+        .detail-label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+
+            color: #918a80;
+        }
+
+
+        .detail-value {
+            display: block;
+
+            font-size: 0.98rem;
+            font-weight: 600;
+
+            color: #302d28;
+        }
+
+
+        /* =====================================================
+           ROOM SUMMARY
+           ===================================================== */
+
+        .room-summary {
+            margin-top: 30px;
+            padding-top: 30px;
+
+            border-top: 1px solid #e7e1d8;
+        }
+
+
+        .room-summary-title {
+            margin-bottom: 17px;
+
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+
+            color: #8b8378;
+        }
+
+
+        .room-summary-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .room-summary-main h3 {
+            margin: 0 0 5px;
+
+            font-family: "Playfair Display", serif;
+            font-size: 1.55rem;
+            font-weight: 500;
+
+            color: #292620;
+        }
+
+
+        .room-number {
+            margin: 0;
+
+            font-size: 0.9rem;
+            color: #817a71;
+        }
+
+
+        .room-price {
+            text-align: right;
+        }
+
+
+        .room-price strong {
+            display: block;
+
+            font-size: 1.2rem;
+            color: #292620;
+        }
+
+
+        .room-price span {
+            font-size: 0.75rem;
+            color: #8c857b;
+        }
+
+
+        /* =====================================================
+           TOTAL
+           ===================================================== */
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 28px;
+            padding-top: 25px;
+
+            border-top: 1px solid #e7e1d8;
+        }
+
+
+        .total-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #706a61;
+        }
+
+
+        .total-amount {
+            font-family: "Playfair Display", serif;
+            font-size: 2rem;
+            color: #25231f;
+        }
+
+
+        /* =====================================================
+           SIDE CARD
+           ===================================================== */
+
+        .confirmation-side {
+            position: relative;
+
+            min-height: 100%;
+
+            padding: 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ded6c8,
+                    #c9bda9
+                );
+
+            overflow: hidden;
+        }
+
+
+        .confirmation-side::before {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            top: -100px;
+            right: -90px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+
+        .confirmation-side-content {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .confirmation-side .eyebrow {
+            margin-bottom: 20px;
+            color: #5d574e;
+        }
+
+
+        .confirmation-side h2 {
+            margin: 0 0 20px;
+
+            font-family: "Playfair Display", serif;
+            font-size: 2.7rem;
+            font-weight: 500;
+            line-height: 1.08;
+
+            color: #292620;
+        }
+
+
+        .confirmation-side h2 em {
+            font-weight: 500;
+        }
+
+
+        .confirmation-side p {
+            max-width: 360px;
+
+            margin: 0;
+
+            line-height: 1.8;
+            color: #5f594f;
+        }
+
+
+        /* =====================================================
+           FEATURES
+           ===================================================== */
+
+        .confirmation-features {
+            position: relative;
+            z-index: 1;
+
+            margin-top: 45px;
+        }
+
+
+        .confirmation-feature {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid rgba(55, 48, 39, 0.15);
+
+            color: #4e493f;
+            font-size: 0.9rem;
+        }
+
+
+        .confirmation-feature:first-child {
+            border-top: 1px solid rgba(55, 48, 39, 0.15);
+        }
+
+
+        .confirmation-feature i {
+            font-size: 0.75rem;
+        }
+
+
+        /* =====================================================
+           ACTIONS
+           ===================================================== */
+
+        .confirmation-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 35px;
+        }
+
+
+        .confirmation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 14px 22px;
+
+            border: 1px solid #302d28;
+
+            background: #302d28;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+
+        .confirmation-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        .confirmation-button.secondary {
+            background: transparent;
+            color: #302d28;
+        }
+
+
+        /* =====================================================
+           SPECIAL REQUESTS
+           ===================================================== */
+
+        .special-request-box {
+            margin-top: 25px;
+            padding: 20px;
+
+            background: #f8f5ef;
+            border-left: 3px solid #c8bba8;
+        }
+
+
+        .special-request-box .detail-label {
+            margin-bottom: 7px;
+        }
+
+
+        .special-request-box p {
+            margin: 0;
+
+            font-size: 0.9rem;
+            line-height: 1.7;
+
+            color: #625c53;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .confirmation-section {
+                grid-template-columns: 1fr;
+            }
+
+            .confirmation-side {
+                min-height: 430px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .confirmation-hero {
+                padding: 80px 6% 50px;
+            }
+
+            .confirmation-section {
+                width: 92%;
+                margin-bottom: 60px;
+            }
+
+            .confirmation-card,
+            .confirmation-side {
+                padding: 30px 24px;
+            }
+
+            .confirmation-details {
+                grid-template-columns: 1fr;
+            }
+
+            .room-summary-main {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .room-price {
+                text-align: left;
+            }
+
+            .confirmation-actions {
+                flex-direction: column;
+            }
+
+            .confirmation-button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="confirmation-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="rooms-navbar">
+
+        <a
+            href="{{ url_for('home') }}"
+            class="rooms-logo"
+        >
+            DESKFLOW<span>.</span>
+        </a>
+
+
+        <nav>
+
+            <a href="{{ url_for('home') }}">
+                Home
+            </a>
+
+            <a href="{{ url_for('rooms') }}">
+                Rooms
+            </a>
+
+            <a href="{{ url_for('home') }}#experience">
+                Experience
+            </a>
+
+            <a href="{{ url_for('home') }}#about">
+                About
+            </a>
+
+            <a href="{{ url_for('home') }}#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="confirmation-hero">
+
+        <p class="eyebrow">
+            ✦ DESKFLOW HOTEL
+        </p>
+
+
+        <h1>
+            You're all<br>
+            <em>set.</em>
+        </h1>
+
+
+        <p>
+            Your stay has been confirmed.
+            Keep your booking code handy—we'll
+            take care of the rest.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONFIRMATION SECTION
+         ===================================================== -->
+
+    <section class="confirmation-section">
+
+
+        <!-- =================================================
+             MAIN CARD
+             ================================================= -->
+
+        <div class="confirmation-card">
+
+
+            <div class="confirmation-icon">
+                ♡
+            </div>
+
+
+            <p class="eyebrow">
+                BOOKING CONFIRMED
+            </p>
+
+
+            <h2>
+                A little escape<br>
+                is waiting for you.
+            </h2>
+
+
+            <p>
+                Thank you, {{ booking.name }}.
+                Your reservation at DESKFLOW has been
+                successfully confirmed.
+            </p>
+
+
+            <!-- =============================================
+                 BOOKING CODE
+                 ============================================= -->
+
+            <div class="booking-code-box">
+
+                <span class="booking-code-label">
+                    YOUR BOOKING CODE
+                </span>
+
+                <span class="booking-code">
+                    {{ booking.booking_code }}
+                </span>
+
+            </div>
+
+
+            <!-- =============================================
+                 BOOKING DETAILS
+                 ============================================= -->
+
+            <div class="confirmation-details">
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        CHECK-IN
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.check_in }}
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        CHECK-OUT
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.check_out }}
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        GUESTS
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.number_of_guests }}
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        STATUS
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.booking_status }}
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        GUEST
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.name }}
+                    </span>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        EMAIL
+                    </span>
+
+                    <span class="detail-value">
+                        {{ booking.email }}
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =============================================
+                 ROOM
+                 ============================================= -->
+
+            <div class="room-summary">
+
+                <div class="room-summary-title">
+                    YOUR ROOM
+                </div>
+
+
+                <div class="room-summary-main">
+
+                    <div>
+
+                        <h3>
+                            {{ booking.room_type }}
+                        </h3>
+
+                        <p class="room-number">
+                            Room {{ booking.room_number }}
+                        </p>
+
+                    </div>
+
+
+                    <div class="room-price">
+
+                        <strong>
+                            ₹{{ booking.price }}
+                        </strong>
+
+                        <span>
+                            per night
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 SPECIAL REQUESTS
+                 ============================================= -->
+
+            {% if booking.special_requests %}
+
+                <div class="special-request-box">
+
+                    <span class="detail-label">
+                        SPECIAL REQUESTS
+                    </span>
+
+                    <p>
+                        {{ booking.special_requests }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+
+            <!-- =============================================
+                 TOTAL
+                 ============================================= -->
+
+            <div class="total-row">
+
+                <span class="total-label">
+                    TOTAL STAY
+                </span>
+
+                <span class="total-amount">
+                    ₹{{ booking.total_amount }}
+                </span>
+
+            </div>
+
+
+            <!-- =============================================
+                 ACTIONS
+                 ============================================= -->
+
+            <div class="confirmation-actions">
+
+                <a
+                    href="{{ url_for('invoice', booking_id=booking.booking_id) }}"
+                    class="confirmation-button"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Download Invoice
+
+                </a>
+
+
+                <a
+                    href="{{ url_for('home') }}"
+                    class="confirmation-button secondary"
+                >
+
+                    Back to DESKFLOW
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SIDE CARD
+             ================================================= -->
+
+        <aside class="confirmation-side">
+
+
+            <div class="confirmation-side-content">
+
+                <p class="eyebrow">
+                    YOUR DESKFLOW MOMENT
+                </p>
+
+
+                <h2>
+                    Stay a little.<br>
+                    <em>Live a lot.</em>
+                </h2>
+
+
+                <p>
+                    From slow mornings to late-night
+                    conversations, make your stay something
+                    worth remembering.
+                </p>
+
+            </div>
+
+
+            <div class="confirmation-features">
+
+                <div class="confirmation-feature">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    <span>
+                        Your room is reserved
+                    </span>
+
+                </div>
+
+
+                <div class="confirmation-feature">
+
+                    <i class="fa-solid fa-wifi"></i>
+
+                    <span>
+                        Complimentary Wi-Fi
+                    </span>
+
+                </div>
+
+
+                <div class="confirmation-feature">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <span>
+                        24/7 guest assistance
+                    </span>
+
+                </div>
+
+
+                <div class="confirmation-feature">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        A stay made for good moments
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-top">
+
+
+            <div>
+
+                <a
+                    href="{{ url_for('home') }}"
+                    class="logo"
+                >
+                    DESKFLOW<span>.</span>
+                </a>
+
+
+                <p>
+                    A little place to feel at home.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+
+                    <a href="{{ url_for('home') }}">
+                        Home
+                    </a>
+
+
+                    <a href="{{ url_for('rooms') }}">
+                        Rooms
+                    </a>
+
+
+                    <a href="{{ url_for('home') }}#experience">
+                        Experience
+                    </a>
+
+
+                    <a href="{{ url_for('home') }}#about">
+                        About
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONTACT
+                    </h4>
+
+
+                    <p>
+                        hello@deskflowhotel.com
+                    </p>
+
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+
+                    <p>
+                        New Delhi, India
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DESKFLOW HOTEL
+            </p>
+
+
+            <p>
+                Made with ♡ for good stays.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+
